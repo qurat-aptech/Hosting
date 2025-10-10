@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome Page</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25694.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ==== Global Styles ==== */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* ==== Navbar ==== */
+    .navbar {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0,0.7) !important;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* ==== Hero Section ==== */
+    #home {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80')
+                  center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    #home h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    #home p {
+      font-size: 1.25rem;
+      margin-top: 15px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    #home .btn-light {
+      margin-top: 25px;
+      font-weight: 600;
+      padding: 12px 25px;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    #home .btn-light:hover {
+      background-color: #000;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ==== Sections ==== */
+    section {
+      padding: 80px 0;
+    }
+
+    #about {
+      background-color: #f8f9fa;
+    }
+
+    #about h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    #contact {
+      background-color: #212529;
+      color: white;
+    }
+
+    #contact button {
+      border-radius: 30px;
+      font-weight: 600;
+      padding: 12px 25px;
+      transition: 0.3s;
+    }
+
+    #contact button:hover {
+      background-color: white;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    /* ==== Footer ==== */
+    footer {
+      background-color: #000;
+      color: #bbb;
+      padding: 15px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#home">MyWebsite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <h1>Welcome to My Website</h1>
+    <p>Modern • Responsive • Clean</p>
+    <a href="#about" class="btn btn-light btn-lg shadow">Learn More</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="text-center">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="lead mx-auto" style="max-width: 700px;">
+        This welcome page is fully responsive and built with HTML, CSS, JavaScript, and Bootstrap.
+        It features smooth animations, modern design, and works perfectly on all devices.
+      </p>
+      <div class="row mt-5">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Fast</h5>
+              <p class="card-text">Quick loading and optimized layout for a smooth user experience.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Responsive</h5>
+              <p class="card-text">Looks great on all screen sizes — mobile, tablet, and desktop.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Modern</h5>
+              <p class="card-text">Sleek and stylish design with smooth animations and interactions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="mb-4">We’d love to hear from you!</p>
+      <button class="btn btn-outline-light btn-lg" onclick="showAlert()">Say Hello 👋</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyWebsite. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Show alert when button clicked
+    function showAlert() {
+      alert("Thank you for visiting! 👋 We'll get in touch soon.");
+    }
+
+    // Highlight active navbar link on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
