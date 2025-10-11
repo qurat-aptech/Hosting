@@ -1,185 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frosty Delights - Ice Cream Heaven</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MK Coffee — Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    :root {
+      --brown-dark: #5a371f;
+      --brown: #6b3e26;
+      --brown-light: #caa486;
+      --cream: #f7f3ef;
+    }
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff8f8;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--cream);
+      color: #2b2b2b;
     }
-
-    /* Navbar */
-    .navbar {
-      background-color: #ff80b5;
+    .brand-circle {
+      width:42px;height:42px;border-radius:50%;
+      background: linear-gradient(135deg,var(--brown-dark),var(--brown));
+      display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;
+      box-shadow:0 2px 6px rgba(0,0,0,0.15);
+      margin-right:8px;
     }
-    .navbar-brand {
-      font-weight: 700;
-      color: white !important;
-    }
-    .nav-link {
-      color: white !important;
-      font-weight: 500;
-    }
-
-    /* Hero Section */
+    .navbar { background: transparent; }
     .hero {
-      background: url('https://images.unsplash.com/photo-1505253216365-cc51359b7e4d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-      position: relative;
+      background-image: url('images/pexels-chevanon-302899.jpg');
+      background-size:cover;
+      background-position:center;
+      min-height:56vh;
+      display:flex;
+      align-items:center;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 6px 30px rgba(43,27,18,0.18);
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+    .hero-overlay {
+      background: linear-gradient(90deg, rgba(43,27,18,0.72) 0%, rgba(43,27,18,0.32) 60%);
+      padding:48px;
     }
-    .hero h1, .hero p, .hero a {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    /* Cards */
-    .flavors .card {
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .flavors .card:hover {
-      transform: translateY(-10px);
-    }
-
-    /* About */
-    .about {
-      background-color: #ffe6ec;
-      padding: 60px 0;
-    }
-
-    /* Contact */
-    .contact {
-      background-color: #fff;
-      padding: 60px 0;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #ff80b5;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .hero h1 { color:var(--cream);font-size:2.6rem;margin-bottom:10px }
+    .hero p { color:rgba(255,255,255,0.9);margin-bottom:16px }
+    .menu-card { border-radius:12px;border:0;box-shadow:0 6px 20px rgba(101,67,40,0.12) }
+    .menu-price { color:var(--brown-dark);font-weight:700 }
+    .btn-brown { background:var(--brown);border:0;color:#fff }
+    .btn-brown:hover { background:var(--brown-dark) }
+    footer { margin-top:40px;padding:24px 0;background:var(--brown);color:#fff;border-radius:12px 12px 0 0; }
+    @media (max-width:768px){
+      .hero { min-height:48vh }
+      .hero h1 { font-size:1.8rem }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="#">🍨 Frosty Delights</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
-          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-        </ul>
+<nav class="navbar navbar-expand-lg py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <div class="brand-circle">MK</div>
+      <div class="d-none d-md-block">
+        <div style="font-weight:700;color:var(--brown);">MK Coffee</div>
+        <small class="text-muted">Fresh • Warm • Simple</small>
       </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
+<main class="container py-4">
   <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="container">
-      <h1>Welcome to Frosty Delights 🍦</h1>
-      <p>Indulge in the creamiest and most flavorful ice creams in town.</p>
-      <a href="#flavors" class="btn btn-light btn-lg mt-3">Explore Flavors</a>
-    </div>
-  </section>
-
-  <!-- Flavors -->
-  <section class="flavors py-5" id="flavors">
-    <div class="container text-center">
-      <h2 class="mb-4">Our Popular Flavors</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Vanilla">
-            <div class="card-body">
-              <h5 class="card-title">Classic Vanilla</h5>
-              <p class="card-text">Smooth, rich, and timelessly delicious.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1590080875831-3a492cc23f51?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Chocolate">
-            <div class="card-body">
-              <h5 class="card-title">Chocolate Bliss</h5>
-              <p class="card-text">A dream come true for every chocolate lover.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Strawberry">
-            <div class="card-body">
-              <h5 class="card-title">Strawberry Swirl</h5>
-              <p class="card-text">Fresh strawberries meet creamy delight.</p>
-            </div>
-          </div>
-        </div>
+  <section class="hero mb-4">
+    <div class="hero-overlay">
+      <h1>Welcome to MK Coffee</h1>
+      <p>Simple, cozy coffee made with care. Locally roasted beans, classic recipes — a warm cup every time.</p>
+      <div>
+        <a href="#menu" class="btn btn-brown me-2">See Menu</a>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section class="about text-center" id="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p class="lead mt-3">At Frosty Delights, we believe that every scoop should bring a smile.  
-      Our ice creams are made from the finest ingredients with love and passion for perfection.</p>
+  <section id="about" class="row align-items-center gy-4 mb-4">
+    <div class="col-lg-6">
+      <h2 style="color:var(--brown)">About MK Coffee</h2>
+      <p>MK Coffee is a small coffee shop focused on classic flavors and friendly service. We roast small batches and craft every cup to order — whether you like it strong, sweet, or smooth.</p>
+      <ul>
+        <li>Small-batch roasts</li>
+        <li>Classic espresso & filter options</li>
+        <li>Cozy, simple aesthetic</li>
+      </ul>
+    </div>
+    <div class="col-lg-6 text-center">
+      <img src="../git task/images/pexels-tyler-nix-1259808-2396220.jpg" alt="coffee cup" class="img-fluid rounded-3 shadow" style="max-height:320px;object-fit:cover">
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="container text-center">
-      <h2>Contact Us</h2>
-      <p class="mb-4">Have questions or want to place an order? Get in touch with us!</p>
-      <form class="mx-auto" style="max-width: 600px;">
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Name" required>
+  <!-- Menu -->
+  <section id="menu" class="mb-4">
+    <h3 class="mb-3" style="color:var(--brown)">Popular Menu</h3>
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <div class="card menu-card p-3 h-100">
+          <img src="../git task/images/pexels-eyad-tariq-2217318-3879495.jpg" class="card-img-top rounded-2" style="height:160px;object-fit:cover">
+          <div class="card-body">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">Rich, intense shot of our signature roast.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="menu-price">₹120</span>
+              <a href="#" class="btn btn-sm btn-outline-dark">Add</a>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Your Email" required>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card menu-card p-3 h-100">
+          <img src="../git task/images/pexels-tyler-nix-1259808-2396220.jpg" class="card-img-top rounded-2" style="height:160px;object-fit:cover">
+          <div class="card-body">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">Velvety milk foam over a balanced espresso base.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="menu-price">₹220</span>
+              <a href="#" class="btn btn-sm btn-outline-dark">Add</a>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card menu-card p-3 h-100">
+          <img src="../git task/images/pexels-tyler-nix-1259808-2396220.jpg" class="card-img-top rounded-2" style="height:160px;object-fit:cover">
+          <div class="card-body">
+            <h5 class="card-title">Cold Brew</h5>
+            <p class="card-text">Slow-steeped cold brew — smooth and refreshing.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="menu-price">₹250</span>
+              <a href="#" class="btn btn-sm btn-outline-dark">Add</a>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="background-color:#ff80b5; border:none;">Send Message</button>
-      </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Frosty Delights | All Rights Reserved</p>
+  <footer class="text-center">
+    <div class="container">
+      <small>© MK Coffee — Brewed with ❤️</small>
+    </div>
   </footer>
+</main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
