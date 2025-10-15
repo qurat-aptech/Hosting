@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportsZone | Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #0d6efd;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    /* Featured Matches */
+    .match-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .match-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">SportsZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Matches</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to SportsZone</h1>
+      <p>Your #1 destination for all sports updates, matches & news!</p>
+      <a href="#" class="btn btn-light btn-lg mt-3">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Featured Matches -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Upcoming Matches</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card match-card">
+            <img src="https://images.unsplash.com/photo-1598373182133-5b9fa6e0d58c?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Football">
+            <div class="card-body text-center">
+              <h5 class="card-title">Football: Team A vs Team B</h5>
+              <p class="text-muted">Oct 20, 2025 | National Stadium</p>
+              <button class="btn btn-primary btn-sm">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card match-card">
+            <img src="https://images.unsplash.com/photo-1579985096647-958d1a57e7a7?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Cricket">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cricket: Pakistan vs India</h5>
+              <p class="text-muted">Oct 25, 2025 | Gaddafi Stadium</p>
+              <button class="btn btn-primary btn-sm">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card match-card">
+            <img src="https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Basketball">
+            <div class="card-body text-center">
+              <h5 class="card-title">Basketball: Lakers vs Heat</h5>
+              <p class="text-muted">Nov 1, 2025 | Sports Arena</p>
+              <button class="btn btn-primary btn-sm">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Latest Sports News</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Pakistan wins the T20 Series</h5>
+              <p class="card-text">In an exciting final, Pakistan claimed victory over Australia to secure the T20 trophy...</p>
+              <a href="#" class="text-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Messi’s Last Season with PSG</h5>
+              <p class="card-text">Rumors suggest Lionel Messi may return to Barcelona for his final professional season...</p>
+              <a href="#" class="text-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">NBA Playoffs Kick Off</h5>
+              <p class="card-text">The 2025 NBA playoffs are underway with some stunning upsets and breakout performances...</p>
+              <a href="#" class="text-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">© 2025 SportsZone. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
