@@ -1,165 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MK Coffee — Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --brown-dark: #5a371f;
-      --brown: #6b3e26;
-      --brown-light: #caa486;
-      --cream: #f7f3ef;
-    }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: var(--cream);
-      color: #2b2b2b;
-    }
-    .brand-circle {
-      width:42px;height:42px;border-radius:50%;
-      background: linear-gradient(135deg,var(--brown-dark),var(--brown));
-      display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;
-      box-shadow:0 2px 6px rgba(0,0,0,0.15);
-      margin-right:8px;
-    }
-    .navbar { background: transparent; }
-    .hero {
-      background-image: url('images/pexels-chevanon-302899.jpg');
-      background-size:cover;
-      background-position:center;
-      min-height:56vh;
-      display:flex;
-      align-items:center;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 6px 30px rgba(43,27,18,0.18);
-    }
-    .hero-overlay {
-      background: linear-gradient(90deg, rgba(43,27,18,0.72) 0%, rgba(43,27,18,0.32) 60%);
-      padding:48px;
-    }
-    .hero h1 { color:var(--cream);font-size:2.6rem;margin-bottom:10px }
-    .hero p { color:rgba(255,255,255,0.9);margin-bottom:16px }
-    .menu-card { border-radius:12px;border:0;box-shadow:0 6px 20px rgba(101,67,40,0.12) }
-    .menu-price { color:var(--brown-dark);font-weight:700 }
-    .btn-brown { background:var(--brown);border:0;color:#fff }
-    .btn-brown:hover { background:var(--brown-dark) }
-    footer { margin-top:40px;padding:24px 0;background:var(--brown);color:#fff;border-radius:12px 12px 0 0; }
-    @media (max-width:768px){
-      .hero { min-height:48vh }
-      .hero h1 { font-size:1.8rem }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sportify | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-<nav class="navbar navbar-expand-lg py-3">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <div class="brand-circle">MK</div>
-      <div class="d-none d-md-block">
-        <div style="font-weight:700;color:var(--brown);">MK Coffee</div>
-        <small class="text-muted">Fresh • Warm • Simple</small>
-      </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-      </ul>
+  <!-- Navbar -->
+  <header class="bg-black text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Sportify</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">News</a>
+        <a href="#" class="hover:text-yellow-400">Matches</a>
+        <a href="#" class="hover:text-yellow-400">Players</a>
+        <a href="#" class="hover:text-yellow-400">Contact</a>
+      </nav>
+      <button class="md:hidden bg-yellow-400 text-black px-3 py-2 rounded-md">Menu</button>
     </div>
-  </div>
-</nav>
+  </header>
 
-<main class="container py-4">
-  <!-- Hero -->
-  <section class="hero mb-4">
-    <div class="hero-overlay">
-      <h1>Welcome to MK Coffee</h1>
-      <p>Simple, cozy coffee made with care. Locally roasted beans, classic recipes — a warm cup every time.</p>
-      <div>
-        <a href="#menu" class="btn btn-brown me-2">See Menu</a>
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-[70vh]" style="background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1600&q=60');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Feel the Passion of Sports</h2>
+      <p class="text-lg md:text-xl mb-6">Your daily source for live scores, news, and events</p>
+      <button class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-300 transition">Join the Club</button>
+    </div>
+  </section>
+
+  <!-- Latest Matches -->
+  <section class="py-12 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center">Latest Matches</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=800&q=60" alt="match" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Team A vs Team B</h3>
+          <p class="text-gray-600 mt-2">Final Score: 3 - 2</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1606415056276-0e9d8aa2b0ff?auto=format&fit=crop&w=800&q=60" alt="match" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">City FC vs Rivals United</h3>
+          <p class="text-gray-600 mt-2">Final Score: 1 - 1</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=60" alt="match" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Lions vs Hawks</h3>
+          <p class="text-gray-600 mt-2">Final Score: 0 - 2</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="row align-items-center gy-4 mb-4">
-    <div class="col-lg-6">
-      <h2 style="color:var(--brown)">About MK Coffee</h2>
-      <p>MK Coffee is a small coffee shop focused on classic flavors and friendly service. We roast small batches and craft every cup to order — whether you like it strong, sweet, or smooth.</p>
-      <ul>
-        <li>Small-batch roasts</li>
-        <li>Classic espresso & filter options</li>
-        <li>Cozy, simple aesthetic</li>
-      </ul>
-    </div>
-    <div class="col-lg-6 text-center">
-      <img src="../git task/images/pexels-tyler-nix-1259808-2396220.jpg" alt="coffee cup" class="img-fluid rounded-3 shadow" style="max-height:320px;object-fit:cover">
+  <!-- Upcoming Events -->
+  <section class="bg-yellow-100 py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Upcoming Events</h2>
+      <p class="mb-8 text-gray-700">Stay tuned for the latest tournaments and championships happening this season.</p>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:w-1/3">
+          <h3 class="font-semibold text-xl mb-2">Champions League</h3>
+          <p>Starts: 20 Oct 2025</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:w-1/3">
+          <h3 class="font-semibold text-xl mb-2">Cricket World Cup</h3>
+          <p>Starts: 5 Nov 2025</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:w-1/3">
+          <h3 class="font-semibold text-xl mb-2">Basketball Finals</h3>
+          <p>Starts: 18 Dec 2025</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Menu -->
-  <section id="menu" class="mb-4">
-    <h3 class="mb-3" style="color:var(--brown)">Popular Menu</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-4">
-        <div class="card menu-card p-3 h-100">
-          <img src="../git task/images/pexels-eyad-tariq-2217318-3879495.jpg" class="card-img-top rounded-2" style="height:160px;object-fit:cover">
-          <div class="card-body">
-            <h5 class="card-title">Espresso</h5>
-            <p class="card-text">Rich, intense shot of our signature roast.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="menu-price">₹120</span>
-              <a href="#" class="btn btn-sm btn-outline-dark">Add</a>
-            </div>
-          </div>
-        </div>
+  <!-- Featured Players -->
+  <section class="py-12 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center">Featured Players</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md text-center p-4">
+        <img src="https://images.unsplash.com/photo-1600962815726-457c5ac4bfc2?auto=format&fit=crop&w=500&q=60" alt="player" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="font-semibold text-xl">John Carter</h3>
+        <p class="text-gray-600">Forward | Team A</p>
       </div>
-
-      <div class="col-12 col-md-4">
-        <div class="card menu-card p-3 h-100">
-          <img src="../git task/images/pexels-tyler-nix-1259808-2396220.jpg" class="card-img-top rounded-2" style="height:160px;object-fit:cover">
-          <div class="card-body">
-            <h5 class="card-title">Cappuccino</h5>
-            <p class="card-text">Velvety milk foam over a balanced espresso base.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="menu-price">₹220</span>
-              <a href="#" class="btn btn-sm btn-outline-dark">Add</a>
-            </div>
-          </div>
-        </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-4">
+        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=500&q=60" alt="player" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="font-semibold text-xl">Ryan Lewis</h3>
+        <p class="text-gray-600">Goalkeeper | City FC</p>
       </div>
-
-      <div class="col-12 col-md-4">
-        <div class="card menu-card p-3 h-100">
-          <img src="../git task/images/pexels-tyler-nix-1259808-2396220.jpg" class="card-img-top rounded-2" style="height:160px;object-fit:cover">
-          <div class="card-body">
-            <h5 class="card-title">Cold Brew</h5>
-            <p class="card-text">Slow-steeped cold brew — smooth and refreshing.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="menu-price">₹250</span>
-              <a href="#" class="btn btn-sm btn-outline-dark">Add</a>
-            </div>
-          </div>
-        </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-4">
+        <img src="https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=500&q=60" alt="player" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="font-semibold text-xl">James Miller</h3>
+        <p class="text-gray-600">Defender | Hawks</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center">
-    <div class="container">
-      <small>© MK Coffee — Brewed with ❤️</small>
+  <footer class="bg-black text-white py-6 mt-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Sportify. All Rights Reserved.</p>
+      <p class="text-sm text-gray-400 mt-2">Designed by Talha 💪</p>
     </div>
   </footer>
-</main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
