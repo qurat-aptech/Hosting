@@ -1,11 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper & Ink - Stationery</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff9f4;
+      color: #333;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1535905748047-14b0fdfbaf4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      height: 90vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .section-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .product-card {
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background-color: #f8e8dc;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>Stilveria work</h1>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Paper & Ink</h1>
+      <p class="lead">Beautiful stationery for beautiful minds.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">About Us</h2>
+      <p class="text-center">At Paper & Ink, we believe in the art of handwriting, the charm of paper, and the elegance of ink. From journals to planners, our stationery is crafted to inspire creativity and organization.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">Featured Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="https://images.unsplash.com/photo-1588776814546-19c18305b8a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Notebook">
+            <div class="card-body">
+              <h5 class="card-title">Classic Notebook</h5>
+              <p class="card-text">A timeless notebook with thick ivory pages, perfect for journaling and notes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="https://images.unsplash.com/photo-1591375275637-ccaa324a3d86?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Planner">
+            <div class="card-body">
+              <h5 class="card-title">Weekly Planner</h5>
+              <p class="card-text">Stay organized with our beautifully designed undated weekly planner.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="https://images.unsplash.com/photo-1589987607627-50882a86f3cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Pen Set">
+            <div class="card-body">
+              <h5 class="card-title">Luxury Pen Set</h5>
+              <p class="card-text">A fine set of gel pens that glide smoothly on any type of paper.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Let us know how we can help..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Paper & Ink. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS CDN (for interactions, optional here) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
